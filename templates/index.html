@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KOVAL Cocktail Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>KOVAL Cocktail Recommender</h1>
+    <h3>Select a product or products to see what you can make!</h3>
+
+    <div class="controls">
+        <button onclick="filterProducts('All')">All</button>
+        <button onclick="filterProducts('Whiskey')">Whiskey</button>
+        <button onclick="filterProducts('Gin')">Gin</button>
+        <button onclick="filterProducts('Liqueur')">Liqueur</button>
+        <button onclick="filterProducts('Vodka')">Vodka</button>
+        <button class="clear-btn" onclick="clearSelection()">Clear Selection</button>
+        <button onclick="viewAllCocktails()" class="all-cocktails-btn">View All Cocktails</button>
+    </div>
+    
+	<div class="logic-selector">
+    	<label>Find recipes matching:</label>
+    	<input type="radio" id="logic-or" name="matchLogic" value="OR" checked> 
+    	<label for="logic-or">With any Selected (OR)</label>
+
+    	<input type="radio" id="logic-and" name="matchLogic" value="AND"> 
+    	<label for="logic-and">With all Selected (AND)</label>
+    
+    	<span class="info-icon" title="OR: Shows recipes containing AT LEAST ONE of your selections. AND: Shows recipes containing ALL of your selections.">
+        ❓
+    	</span>
+	</div>
+
+    <div class="main-layout">
+
+        <div class="left-content">
+            
+            <div class="scroll-container" id="productScroll">
+                {% for product in products %}
+                <div 
+                    class="product-item" 
+                    onclick="toggleSelect('{{ product.product_name }}', this)"
+                    data-category="{{ product.category }}"
+                    data-description="{{ product.description }}"
+                    data-image="{{ url_for('static', filename='images/' ~ product.image) }}"
+                    data-name="{{ product.product_name }}"
+                    data-proof="{{ product.proof }}"
+                    ondblclick="showDetails(this)"
+                >
+                    <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.product_name }}">
+                    <p>{{ product.product_name }}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+            <hr>
+
+            <h2 id="recommendation-header">Recommended Cocktails</h2>
+            <div id="recommendations"></div>
+        </div>
+
+        <div id="productDetailBox" class="right-content">
+            <h3>Product Details</h3>
+            <img id="detailImage" alt="Product Image">
+            <h2 id="detailName"></h2>
+            <p id="detailCategory"></p>
+            <p id="detailProof"></p>
+            <p id="detailDesc"></p>
+
+            <p style="text-align: center; color: #555;">Double-click a product image to view details here.</p>
+        </div>
+        </div>
+    <script>
+        let selectedProducts = [];
+        
+    	// Function to set up event listeners and initial state
+    	document.addEventListener('DOMContentLoaded', () => {
+        	// 1. Initial setup calls (these were likely running freely before)
+        	filterProducts('All');
+        	fetchRecommendations(); 
+        
+        	// 2. NEW LOGIC: Listen for changes to the AND/OR radio buttons
+        	const radioButtons = document.querySelectorAll('input[name="matchLogic"]');
+        
+        	radioButtons.forEach(radio => {
+            	radio.addEventListener('change', () => {
+                	// Only fetch if the user has actually selected products 
+                	// OR if the 'View All' flag is set.
+                	if (selectedProducts.length > 0) {
+                    	fetchRecommendations();
+                	}
+                	// Optional: You could call fetchRecommendations() regardless, 
+                	// but if selectedProducts is empty, the result will just be 
+                	// the "Select an ingredient" message (which is correct).
+            	});
+        	});
+    	});
+        
+        // --- RECIPE LOGIC (No major structural change) ---
+
+        function toggleSelect(productName, element) {
+            if (selectedProducts.includes(productName)) {
+                selectedProducts = selectedProducts.filter(p => p !== productName);
+                element.classList.remove("selected");
+            } else {
+                selectedProducts.push(productName);
+                element.classList.add("selected");
+            }
+            fetchRecommendations();
+        }
+        
+
+		function fetchRecommendations() {
+    		// 1. Get the selected logic mode
+    		const matchLogic = document.querySelector('input[name="matchLogic"]:checked').value;
+
+    		document.getElementById("recommendation-header").textContent = "Loading Recommendations...";
+    		document.getElementById("recommendations").innerHTML = "";
+
+    		fetch("/recommend", {
+        		method: "POST",
+        		headers: { "Content-Type": "application/json" },
+        		body: JSON.stringify({ 
+            		selected: selectedProducts,
+            		// 2. Add the new key/value pair to the payload
+            		logic: matchLogic 
+        		})
+    		})
+    		// ... rest of the fetch promise chain remains the same ...
+    		.then(res => {
+        		if (!res.ok) {
+            		throw new Error(`HTTP error! Status: ${res.status}`);
+        		}
+        		return res.json();
+    		})
+    		.then(data => renderRecommendations(data.recommendations))
+    		.catch(error => {
+        		// ... error handling ...
+    });
+}
+
+        function renderRecommendations(recs) {
+            const box = document.getElementById("recommendations");
+            box.innerHTML = ""; 
+            const header = document.getElementById("recommendation-header");
+
+            if (recs && recs.length > 0) {
+                header.textContent = `${recs.length} Recommended Cocktail${recs.length !== 1 ? 's' : ''}`;
+                
+                recs.forEach(r => {
+                    const div = document.createElement("div");
+                    div.className = "rec-card";
+                    
+                    let html = `<h3>${r.name}</h3>`;
+                    html += `<h4>Ingredients:</h4><ul>`;
+                    html += r.ingredients.map(ing => 
+                        `<li><strong>${ing.quantity}</strong> of ${ing.item}</li>`
+                    ).join('');
+                    html += `</ul>`;
+                    html += `<h4>Instructions:</h4><p>${r.instructions}</p>`;
+
+                    div.innerHTML = html;
+                    box.appendChild(div);
+                });
+            } else {
+                header.textContent = "Recommended Cocktails";
+                box.innerHTML = selectedProducts.length > 0 
+                    ? `<p>No recipes found using any of the selected ingredients.</p>`
+                    : `<p>Select one or more products above to view cocktail recommendations.</p>`;
+            }
+        }
+
+        function viewAllCocktails() {
+    		// 1. Clear any current selection state (both data and visuals)
+    		clearSelection(false); // Call with 'false' to prevent a double fetch
+
+    		// 2. We use a special placeholder in the selectedProducts list.
+    		// Your Flask app will need to recognize this special value.
+    		selectedProducts = ['VIEW_ALL_RECIPES_FLAG'];
+
+    		// 3. Update the filter button visual state (optional, but good practice)
+    		document.querySelectorAll(".controls button").forEach(btn => btn.classList.remove("active"));
+    		const allBtn = document.querySelector(".all-cocktails-btn");
+    		if (allBtn) {
+        		allBtn.classList.add("active");
+    		}
+
+    		// 4. Fetch all recipes
+    		fetchRecommendations();
+		}
+
+		// UPDATE: Modify clearSelection to allow clearing without immediate re-fetch
+		function clearSelection(shouldFetch = true) {
+    		selectedProducts = [];
+    		document.querySelectorAll(".product-item").forEach(el => el.classList.remove("selected"));
+    
+    		// Clear all filter button highlights
+    		document.querySelectorAll(".controls button").forEach(btn => btn.classList.remove("active"));
+
+    		// Reset product filter to 'All'
+    		filterProducts('All');
+
+    		if (shouldFetch) {
+        		// If the user clears selection, we want to show the 'Select an Ingredient' message
+        		fetchRecommendations(); 
+    		}
+		}
+
+        function filterProducts(category) {
+            const items = document.querySelectorAll(".product-item");
+            const buttons = document.querySelectorAll(".controls button");
+
+            buttons.forEach(btn => {
+                btn.classList.remove("active");
+                if (btn.textContent === category || (category === "All" && btn.textContent === "All")) {
+                    btn.classList.add("active");
+                }
+            });
+
+            items.forEach(item => {
+                if (category === "All" || item.dataset.category === category) {
+                    item.style.display = "inline-block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+        // --- DETAIL BOX LOGIC (Updated to target static DIV) ---
+        
+        function showDetails(element) {
+    		const detailBox = document.getElementById("productDetailBox");
+
+    		// Retrieve all necessary data attributes from the product item
+    		const name = element.dataset.name;
+    		const desc = element.dataset.description;
+    		const image = element.dataset.image;
+    		const category = element.dataset.category || '';
+    		const proof = element.dataset.proof || ''; 
+
+    		// Get the image element
+    		const imgElement = document.getElementById("detailImage");
+
+    		// Update the content of the detail box
+    		document.getElementById("detailName").textContent = name;
+    		document.getElementById("detailDesc").textContent = desc;
+    		document.getElementById("detailCategory").textContent = `Category: ${category}`;
+    		document.getElementById("detailProof").textContent = `Proof: ${proof}`;
+    
+    		// --- NEW LOGIC FOR IMAGE DISPLAY ---
+    		if (image) {
+        		imgElement.src = image;
+        		imgElement.style.display = "block"; // Show the image if we have a source
+    		} else {
+        		imgElement.style.display = "none"; // Keep it hidden if no image is available
+    		}
+    
+    		// Show the detail box (in case it was hidden on load for mobile optimization)
+    		detailBox.style.display = "block";
+		};
+    </script>
+</body>
+</html>
