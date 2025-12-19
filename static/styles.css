@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* --- PRODUCT SCROLL CONTAINER --- */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    
+    /* Mobile Optimization: Smooth scrolling and snap alignment */
+    -webkit-overflow-scrolling: touch; 
+    scroll-snap-type: x mandatory; 
+}
+
+.product-item {
+    flex: 0 0 auto;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    scroll-snap-align: start; /* Mobile Optimization: snaps item to the view */
+}
+
+.product-item img {
+    height: 140px;
+    width: auto;
+}
+
+.product-item.selected {
+    border-color: #C89C3C; /* Gold-ish KOVAL tone */
+    box-shadow: 0 0 8px #C89C3C;
+}
+
+/* --- RECOMMENDATIONS --- */
+#recommendations {
+    margin-top: 20px;
+}
+
+.rec-card {
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+/* --- CONTROLS/BUTTONS --- */
+.controls {
+    margin-bottom: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    padding: 9px 14px;
+    cursor: pointer;
+    border-radius: 22px;
+    font-weight: 600;
+    border: 2px solid #d1b46c; /* Koval gold */
+    background: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.controls button:hover {
+    background: #f9f3d9;
+    box-shadow: 0 0 6px rgba(209, 180, 108, 0.6);
+}
+
+.controls button.active {
+    background: #d1b46c;
+    color: white;
+    box-shadow: 0 0 8px rgba(209, 180, 108, 0.9);
+}
+
+.clear-btn {
+    border-color: #b15f5f;
+    background: #fff0f0;
+    color: #7a2c2c;
+}
+
+.clear-btn:hover {
+    background: #ffd9d9;
+    box-shadow: 0 0 6px rgba(177, 95, 95, 0.6);
+}
+
+/* --- MODAL/DETAIL BOX BASE STYLES --- */
+.modal-content img {
+    /* These styles are kept for general image consistency, 
+       but #detailImage specific styles are used in the new layout */
+    max-width: 230px;
+    height: 230px;
+    object-fit: contain; 
+    border-radius: 8px;
+}
+
+.modal-clear {
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: #d1b46c;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.modal-clear:hover {
+    background: #b89c54;
+}
+
+/* ================================================= */
+/* --- FLEXBOX LAYOUT & DETAIL BOX (NEW ADDITIONS) --- */
+/* ================================================= */
+
+.main-layout {
+    display: flex;       
+    gap: 30px;           
+    margin-top: 20px;
+}
+
+.left-content {
+    flex: 3;             
+    min-width: 0;        
+}
+
+.right-content {
+    flex: 1;             
+    min-width: 280px;    
+    max-width: 350px;
+    
+    /* Sticky positioning for the side panel */
+    position: sticky;    
+    top: 20px;           
+    height: fit-content; 
+    
+    /* Visual styling for the Detail Box */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- STYLES FOR CONTENT INSIDE THE DETAIL BOX --- */
+#productDetailBox h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#detailImage {
+    max-width: 100%;
+    height: auto;
+    display: none;
+    margin: 15px auto;
+    border-radius: 8px;
+    object-fit: contain; 
+}
+
+#detailName, #detailCategory, #detailProof, #detailDesc {
+    margin-bottom: 10px;
+}
+
+/* --- Logic Selector Styling --- */
+.logic-selector {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    font-size: 0.95em;
+    border-top: 1px solid #eee;
+}
+
+.logic-selector label {
+    margin-right: 5px;
+}
+
+/* --- Info Icon and Tooltip --- */
+.info-icon {
+    position: relative; /* Container for the tooltip */
+    cursor: help;       /* Changes cursor to indicate help/info */
+    font-weight: bold;
+    color: #444;
+    margin-left: 5px;
+}
+
+/* Hide the default browser tooltip and show our custom one */
+.info-icon[title]:hover::after {
+    content: attr(title); /* Pulls the explanation text from the 'title' attribute */
+    
+    /* Positioning and Appearance */
+    position: absolute;
+    bottom: 100%;       /* Position above the icon */
+    left: 50%;          /* Center horizontally relative to the icon */
+    transform: translateX(-50%); /* Fine-tune centering */
+    
+    /* Styling */
+    white-space: normal; /* Allows text to wrap */
+    min-width: 250px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    z-index: 100;       /* Ensure it displays over other content */
+    margin-bottom: 5px; /* Space between icon and tooltip box */
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- MOBILE/SMALL SCREEN ADJUSTMENTS --- */
+@media (max-width: 950px) {
+    .main-layout {
+        flex-direction: column; /* Stacks the columns vertically */
+    }
+    
+    .right-content {
+        position: static; /* Remove sticky positioning */
+        margin-bottom: 20px;
+        order: -1;        /* Display the product details BEFORE the recipes */
+    }
+
+    /* Optional: Slight adjustment for tight mobile screens */
+    body {
+        padding: 10px;
+    }
+}
