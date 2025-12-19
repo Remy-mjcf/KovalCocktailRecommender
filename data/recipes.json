@@ -1,0 +1,262 @@
+{
+  "cocktail_recipes": [
+    {
+      "name": "OLD FASHIONED - STIR",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Vanilla Cherry Bark Bitters", "quantity": "3 Dashes"},
+        {"item": "Turbo (Turbinado Syrup)", "quantity": "0.25 oz"},
+        {"item": "Bourbon", "quantity": "2.0 oz"}
+      ],
+      "instructions": "Build in mixing glass add ice stir to dilute then strain over big rock into Rocks glass. Garnish: Orange swath insert w cherries."
+    },
+    {
+      "name": "CRANBERRY GIN SPRITZ - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Soda Water", "quantity": "4.0 oz"},
+        {"item": "Lime Juice", "quantity": "0.25 oz"},
+        {"item": "Cranberry Gin", "quantity": "2.0 oz"}
+      ],
+      "instructions": "Add ice to wine glass Add  soda water on top of the ice Add the lime juice & cranberry gin Top with more soda finish with a quick stir and garnish to serve. Garnish: Half orange wheel insert."
+    },
+    {
+      "name": "RAVENSWOOD SPRITZ - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lemon Juice", "quantity": "0.50 oz"},
+        {"item": "Cocchi Americano", "quantity": "0.50 oz"},
+        {"item": "Dry Gin", "quantity": "1.0 oz"}
+      ],
+      "instructions": "Add ingredients to shaker tin with the cheapest ingredient first add ice shake  strain over ice into collins glass. Garnish: lemon wheel insert."
+    },
+    {
+      "name": "PHONEY NEGRONI - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Campari", "quantity": "1.5 oz"},
+        {"item": "Cocchi Di Torino", "quantity": "0.75 oz"},
+        {"item": "Cranberry Gin", "quantity": "0.25 oz"},
+        {"item": "Dry Gin", "quantity": "1.5 oz"}
+      ],
+      "instructions": "Add ice to Collins glass add .75 oz of Gentiana  add the vermouth, cranberry, gin, and dry gin top with more Gentiana finish with a quick stir and garnish to serve. Garnish: orange swath expression & insert."
+    },
+    {
+      "name": "NEGRONI - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Campari", "quantity": "1.0 oz"},
+        {"item": "Cocchi Di Torino", "quantity": "1.0 oz"},
+        {"item": "Dry Gin", "quantity": "1.0 oz"}
+      ],
+      "instructions": "Add ingredients to mixing glass, add ice, stir for 40 rotations. Strain over big ice cube in rocks glass. Garnish: orange half moon insert."
+    },
+    {
+      "name": "SHAMELESSLY NAMELESS - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Angostura Bitters", "quantity": "4 Dashes"},
+        {"item": "Lemon Juice", "quantity": "0.50 oz"},
+        {"item": "Allspice Syrup", "quantity": "0.25 oz"},
+        {"item": "Ginger Liqueur", "quantity": "0.25 oz"},
+        {"item": "Dry Gin", "quantity": "1.75 oz"}
+      ],
+      "instructions": "Add ingredients to the shaker tin, starting with the cheapest ingredient first add ice shake and double strain over rocks in “water glass”  garnish to serve. Garnish: Lemon swath expression & insert."
+    },
+    {
+      "name": "HOW BOUT A HUG? - STIR",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Chocolate Bitters", "quantity": "3 Dashes"},
+        {"item": "Fee Cherry Bitters", "quantity": "3 Dashes"},
+        {"item": "Turbo (Turbinado Syrup)", "quantity": "0.25 oz"},
+        {"item": "Four Grain", "quantity": "2.0 oz"}
+      ],
+      "instructions": "Add ingredients to mixing glass with the bitters first add sugar  add liquor top with ice and stir to dilute stain with julep over big rock in rocks glass. Garnish: Orange swath expression & “twist” insert."
+    },
+    {
+      "name": "MIDNIGHT OIL - STIR",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Angostura bitters", "quantity": "1 Dash"},
+        {"item": "Turbo (Turbinado Syrup)", "quantity": "0.25 oz"},
+        {"item": "Cold Brew Coffee", "quantity": "0.50 oz"},
+        {"item": "Coffee Liqueur", "quantity": "0.50 oz"},
+        {"item": "Oat", "quantity": "1.5 oz"}
+      ],
+      "instructions": "Add ingredients to mixing glass top with ice stir to dilute strain over ice in “water glass”. Garnish: Lemon swath expression - insert."
+    },
+    {
+      "name": "THAI CHILI COOLER - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lime Juice", "quantity": "0.75 oz"},
+        {"item": "Simple Syrup", "quantity": "0.75 oz"},
+        {"item": "Coconut Water", "quantity": "0.75 oz"},
+        {"item": "Chili Infused Vodka", "quantity": "2.0 oz"}
+      ],
+      "instructions": "Add ingredients to shaker tin top with ice shake and double strain over ice in collins glass. Garnish: Cucumber slice insert."
+    },
+    {
+      "name": "ESPRESSO MARTINI - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Cherry Bark Vanilla Bitters", "quantity": "2 Dashes"},
+        {"item": "Turbo (Turbinado Syrup)", "quantity": "0.50 oz"},
+        {"item": "Espresso", "quantity": "1.0 oz"},
+        {"item": "Coffee Liqueur", "quantity": "1.0 oz"},
+        {"item": "Vodka", "quantity": "1.0 oz"}
+      ],
+      "instructions": "Add ingredients to shaker tin add ice shake until you feel the shaker tin ice up on the outside double strain the cocktail into coupe. Serve Neat No Garnish."
+    },
+    {
+      "name": "BEE’S KNEES - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lemon Juice", "quantity": "0.75 oz"},
+        {"item": "Honey Syrup", "quantity": "0.75 oz"},
+        {"item": "Honey & Chrysanthemum Liqueur", "quantity": "0.50 oz"},
+        {"item": "Barrel Aged Gin", "quantity": "1.5 oz"}
+      ],
+      "instructions": "Add ingredients to shaker tin add ice shake until tin iCes up on the outside double strain into coupe garnish. Garnish: Lemon wheel insert."
+    },
+    {
+      "name": "GINGER RICKEY - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lime Juice", "quantity": "0.5 oz"},
+        {"item": "Ginger Liqueur", "quantity": "1.5 oz"},
+        {"item": "Soda Water", "quantity": "4.0 oz"}
+      ],
+      "instructions": "Add lime and ginger liqueur to collins glass, add ice, top with soda water. Garnish: Lime wheel insert."
+    },
+    {
+      "name": "CRANBERRY HOT TODDY - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lemon Juice", "quantity": "0.25 oz"},
+        {"item": "Simple Syrup", "quantity": "0.25 oz"},
+        {"item": "Ginger Liqueur", "quantity": "0.50 oz"},
+        {"item": "Cranberry Gin", "quantity": "1.5 oz"}
+      ],
+      "instructions": "Add ingredients to mug top with hot water garnish. Garnish: Lemon wheel insert with star anise on top."
+    },
+    {
+      "name": "BOURBON HOT TODDY - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lemon Juice", "quantity": "0.25 oz"},
+        {"item": "Honey Syrup", "quantity": "0.25 oz"},
+        {"item": "Honey & Chrysanthemum Liqueur", "quantity": "0.50 oz"},
+        {"item": "Bourbon", "quantity": "1.5 oz"}
+      ],
+      "instructions": "Add ingredients to mug top with hot water garnish. Garnish: Lemon wheel and cinnamon stick insert."
+    },
+    {
+      "name": "ROSE HIP HOT TODDY - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lemon Juice", "quantity": "0.25 oz"},
+        {"item": "Vanilla Syrup", "quantity": "0.25 oz"},
+        {"item": "Rose Hip Liqueur", "quantity": "1.0 oz"},
+        {"item": "White Rye", "quantity": "1.0 oz"}
+      ],
+      "instructions": "Add ingredients to mug top with hot water garnish. Garnish: Lemon wheel insert."
+    },
+    {
+      "name": "PITCH A TENT - STIR",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Vanilla Bitters", "quantity": "2 Dashes"},
+        {"item": "Marshmallow Syrup", "quantity": "0.50 oz"},
+        {"item": "Four Grain", "quantity": "2.0 oz"}
+      ],
+      "instructions": "Add ingredients to mixing glass  add ice stir to dilute. Garnish: Top w Lapsang Tea Spray."
+    },
+    {
+      "name": "BARREL AGED MANHATTAN - IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Angostura Bitters", "quantity": "2 Dashes"},
+        {"item": "Rosehip Liqueur", "quantity": "0.125 oz"},
+        {"item": "Cocchi di Torino", "quantity": "0.75 oz"},
+        {"item": "Rye", "quantity": "1.5 oz"}
+      ],
+      "instructions": "Made to order: 'On the rocks' = Add ingredients to water glass add ice stir down to dilute top with a couple more ice cubes garnish to serve. 'Neat' = Add ingredients to mixing glass add ice stir to dilute strain into Nick & Nora Garnish: cherry in glass. 'Batched' Method: Add the Ango & Rosehip Liqueur to the water glass add ice fill glass with batch until the drink looks full. Garnish: Cherries on a pick."
+    },
+    {
+      "name": "MULES (Base Recipe)",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lime Juice", "quantity": "0.50 oz"},
+        {"item": "Base Spirit (e.g., Vodka, Gin, Whiskey, Rum, Brandy)", "quantity": "1.5 oz"},
+        {"item": "Ginger beer (Fever Tree)", "quantity": "Top with"}
+      ],
+      "instructions": "Add ice to copper julep  add a little bit of ginger beer at the base  Add Lime, simple, and base spirit Top with more ginger beer give the drink a quick stir garnish to serve. Garnish: Lime wheel- insert."
+    },
+    {
+      "name": "HIGH BALL (e.g., Gin & Tonics, Vodka Soda)",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Base Spirit", "quantity": "1.5 oz"},
+        {"item": "Mixer (soda, tonic, etc.)", "quantity": "Add to fill the glass"}
+      ],
+      "instructions": "Add ice to collins glass add a little bit of soda to the base add spirit top with more soda. Ask guest if they would like a lemon or a lime for their garnish place lemon or lime wedge on the edge of the glass."
+    },
+    {
+      "name": "LET IT LINGER - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lime Juice", "quantity": "0.50 oz"},
+        {"item": "Simple Syrup", "quantity": "0.50 oz"},
+        {"item": "Ginger Liqueur", "quantity": "0.50 oz"},
+        {"item": "Cranberry Gin", "quantity": "1.0 oz"},
+        {"item": "Dry Gin", "quantity": "1.0 oz"}
+      ],
+      "instructions": "Add ingredients to shaker tin with the cheapest ingredient first add ice shake  strain into coup glass. Garnish: lime wheel."
+    },
+    {
+      "name": "THE FRANKENSTEIN - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lime Juice", "quantity": "0.75 oz"},
+        {"item": "All Spice Syrup", "quantity": "0.25 oz"},
+        {"item": "Cocchi Americano", "quantity": "0.75 oz"},
+        {"item": "Caraway Liqueur", "quantity": "0.75 oz"},
+        {"item": "Barrel Aged Gin", "quantity": "0.75 oz"}
+      ],
+      "instructions": "Add ingredients to shaker tin with the cheapest ingredient first add ice shake  strain over big cube in rocks glass. Garnish: dehydrated lime wheel on top."
+    },
+    {
+      "name": "BLACKBERRY SOUR - SHAKE",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Lime Juice", "quantity": "0.75 oz"},
+        {"item": "Blackberry Syrup", "quantity": "0.75 oz"},
+        {"item": "Thai Chili Vodka (optional)", "quantity": "0.25 oz"},
+        {"item": "Amburana Rye", "quantity": "2.0 oz"}
+      ],
+      "instructions": "Add ingredients to shaker tin with the cheapest ingredient first add ice shake  strain over big cube in rocks glass. Garnish: dehydrated lime wheel on top."
+    },
+    {
+      "name": "FRONT PORCH - BUILD IN GLASS",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Toasted Almond Bitters", "quantity": "4 dashes"},
+        {"item": "Bourbon", "quantity": "2.0 oz"},
+        {"item": "Lemonade", "quantity": "4.0 oz"}}
+      ],
+      "instructions": "Add ingredients to stemless wine glassand add ice to fill. Garnish: Lemon wheel insert."
+    },
+    {
+      "name": "JP Bulldog - STIR",
+      "category": "Cocktail",
+      "ingredients": [
+        {"item": "Cherry Bark Vanilla Bitters", "quantity": "2 Dashes"},
+        {"item": "Oat Whiskey", "quantity": "1.0 oz"},
+        {"item": "Coffee Liqueur", "quantity": "1.5 oz"}
+      ],
+      "instructions": "Add ingredients to mixing glass  add ice stir to dilute. Garnish: Shaken heavy cream with grated nutmeg."
+    }
+  ]
+}

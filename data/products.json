@@ -1,0 +1,146 @@
+[
+  {
+    "product_name": "KOVAL Bourbon",
+    "category": "Whiskey",
+    "subtype": "Bourbon",
+    "proof": "94 proof",
+    "description": "With a mash bill of 51% corn and 49% millet, KOVAL Bourbon offers a drinking experience that is balanced, approachable, and unparalleled. The unusual grain combination provides notes of mango chutney and vanilla on the palate, with a peppery caramel finish. Single Barrel. Heart cut. Organic. Kosher. Gold Medal - Women's Wine & Spirit Awards 2020; Gold Medal - International Whisky Competition 2014; Best Whiskey from the USA - Falstaff Whisky Trophy 2019",
+    "size": "750 ml",
+    "image": "Bourbon.webp"
+  },
+  {
+    "product_name": "KOVAL Four Grain Whiskey",
+    "category": "Whiskey",
+    "subtype": "Four-Grain Whiskey",
+    "proof": "94 proof",
+    "description": "Distilled from a mash bill of oat, malted barley, rye, and wheat. The four grains define its depth with a banana nose, creamy palate, and spicy finish. Single Barrel. Heart cut. Organic. Kosher.",
+    "size": "750 ml",
+    "image": "FourGrain.webp"
+  },
+  {
+    "product_name": "KOVAL Oat Whiskey",
+    "category": "Whiskey",
+    "subtype": "Single-Grain Oat Whiskey",
+    "proof": "80 proof",
+    "description": "One of the first producers to play with a whiskey mash bill of 100% oat. Rich in flavors of milk chocolate, coconut, caramel and cashew, with an exceptionally creamy palate and finish.",
+    "size": "750 ml",
+    "image": "Oat.webp"
+  },
+  {
+    "product_name": "KOVAL Dry Gin",
+    "category": "Gin",
+    "subtype": "Dry Gin",
+    "proof": "94 proof",
+    "description": "Made with a unique variety of woodland spices. Juniper and wildflowers envelop the nose, while the taste is dry yet vibrant — clean and nuanced by emerald grasses, golden citrus, and white pepper with a round, floral body. Crisp enough to enjoy straight and excellent in cocktails both classic and contemporary. Double Gold - Women’s Wine and Spirit Awards 2020; Double Gold - San Francisco World Spirits Competition 2015; Best in Show - Los Angeles International Spirits Competition 2015; Gold Medal - SIP Awards 2015",
+    "size": "750 ml",
+    "image": "DryGin.webp"
+  },
+  {
+    "product_name": "KOVAL Barreled Gin",
+    "category": "Gin",
+    "subtype": "Barreled Gin",
+    "proof": "94 proof",
+    "description": "Crafted with the same prized recipe as the Dry Gin, but matured in a KOVAL whiskey barrel — adding citrus and spice with a light butterscotch sweetness. Crisp enough to be enjoyed straight or as a new layer of depth in classic cocktails such as Old Fashioned, Negroni or Gimlet.",
+    "size": "750 ml",
+    "image": "BarreledGin.webp"
+  },
+  {
+    "product_name": "KOVAL Cranberry Gin Liqueur",
+    "category": "Gin",
+    "subtype": "Cranberry Gin Liqueur",
+    "proof": "60 proof",
+    "description": "Offers an enticing blend of fruit-forward and bittersweet flavors, surrounded by the crisp, well-rounded notes of KOVAL Gin’s signature 13 botanicals. Excellent base for easy, enticing cocktails for all seasons — simply mix with sparkling water or prosecco for a spritz.",
+    "size": "750 ml",
+    "image": "CranberryGin.webp"
+  },
+  {
+    "product_name": "KOVAL Chrysanthemum & Honey Liqueur",
+    "category": "Liqueur",
+    "subtype": "Floral / Honey Liqueur",
+    "proof": "40 proof",
+    "description": "Crafted using two distinct varieties of chrysanthemum flowers and organic wildflower honey from Wisconsin. Graceful floral nose and full-bodied texture — bright and soothing, perfect in cocktails of all seasons.",
+    "size": "375 ml",
+    "image": "Honey.webp"
+  },
+  {
+    "product_name": "KOVAL Rose Hip Liqueur",
+    "category": "Liqueur",
+    "subtype": "Rose-Hip Liqueur",
+    "proof": "40 proof",
+    "description": "Rose hips — the fruits of the rose flower — give this liqueur a brilliant tart-sweetness and a citrus-forward flavor profile. A welcome yet unexpected sweet-vermouth swap.",
+    "size": "375 ml",
+    "image": "RoseHip.webp"
+  },
+  {
+    "product_name": "KOVAL Coffee Liqueur",
+    "category": "Liqueur",
+    "subtype": "Coffee Liqueur",
+    "proof": "40 proof",
+	"description": "The single origin beans from Intelligentsia Coffee lend flavors of vanilla cream, buttered scone and dry cranberries to the delightful KOVAL Coffee Liqueur. Hints of deeply decadent dark chocolate serve as a bedrock for the lighter notes on top. Ideal after dinner, in desserts, or added into a freshly brewed cup of coffee.", 
+	"size": "375 ml",
+    "image": "Coffee.webp"
+  },
+  {
+    "product_name": "KOVAL Caraway Liqueur",
+    "category": "Liqueur",
+    "subtype": "Caraway Liqueur",
+    "proof": "40 proof",
+	"description": "Koval Caraway Liqueur is a Caraway Spice liqueur produced by Koval Distillery in Illinois (United States). It is made from a mash bill of white whiskey.",  
+	"size": "375 ml",
+    "image": "Caraway.jpg"
+  },
+  {
+    "product_name": "KOVAL Ginger Liqueur",
+    "category": "Liqueur",
+    "subtype": "Ginger Liqueur",
+    "proof": "40 proof",
+	"description": "Ginger was once one of the most popular spices in the world, prized for its medicinal and culinary uses. Each batch of organic Ginger Liqueur requires 60 pounds of fresh ginger, all of which is hand-peeled in house for the most vivid flavor. KOVAL Ginger Liqueur is spicy with a touch of sweetness, with a satiny and luxurious mouthfeel. Perfect for mules, spritzes, or any drink that needs a bit of an extra kick!", 
+	"size": "375 ml",
+    "image": "Ginger.webp"
+  },
+  {
+    "product_name": "KOVAL Millet Whiskey",
+    "category": "Whiskey",
+    "subtype": "Millet Whiskey",
+    "proof": "80 proof",
+    "description": "KOVAL is the first distillery in the US to utilize millet, a prized grain in Asia and Africa, in its whiskeys. With a mash bill of 100% millet coupled with KOVAL's signature distilling technique designed to highlight the true flavor of the grain, KOVAL Millet offers whiskey lovers a single grain expression with a truly singular drinking experience. Notes of nut and vanilla define the palate, with a clean and bright finish.",
+    "size": "750 ml",
+    "image": "Millet.webp"
+  },
+  {
+    "product_name": "KOVAL Rye Whiskey",
+    "category": "Whiskey",
+    "subtype": "Rye Whiskey",
+    "proof": "80 proof",
+    "description": "KOVAL Rye, made with a unique mash bill of 100% organic rye grain, is a surprisingly fresh and light whiskey, with mellow and somewhat sweet notes of maple and candy corn, ending with a classically spicy finish. Works beautifully in classic cocktails such as a Manhattan, Sazerac or Scofflaw, where its grain-forward spiciness balances out the sweetness of other ingredients.",
+    "size": "750 ml",
+    "image": "Rye.webp"
+  },
+  {
+    "product_name": "KOVAL White Rye Whiskey",
+    "category": "Whiskey",
+    "subtype": "White-Rye Whiskey",
+    "proof": "80 proof",
+    "description": "Our unaged White Rye is perfect when sipped neat but also excellent over ice or in classic and contemporary cocktails. Barely touching the barrel before being bottled, this is the true essence of rye without being overshadowed by oak. It is a traditional American spirit. George Washington made it in his distillery, and it was common in the New World before the rise of bourbon after the Whiskey Rebellion. Peppery and floral notes overflow in this white whiskey, which some compare to aquavit.",
+    "size": "750 ml",
+    "image": "WhiteRye.webp"
+  },
+  {
+    "product_name": "KOVAL Amburana Rye Whiskey",
+    "category": "Whiskey",
+    "subtype": "Amurana-Rye Whiskey",
+    "proof": "100 proof",
+    "description": "A rare and exclusive KOVAL Rye expression, finished in Brazilian Amburana barrels for a beautifully smooth and well-balanced flavor profile. Crafted with KOVAL's signature 100% organic rye mash bill. 100 Proof Tasting Notes This Rye brings a delicious grain-forward spiciness to the palate, with a sweet smell of vanilla and notes of cardamom, coconut, and cinnamon advancing throughout the entire drinking experience. Awards 2023 Whiskies of the World - Bronze",
+    "size": "750 ml",
+    "image": "AmburanaRye.webp"
+  },
+  {
+    "product_name": "KOVAL Vodka",
+    "category": "Vodka",
+    "subtype": "Vodka",
+    "proof": "80 proof",
+    "description": "Made from 100% rye grain and triple filtered, KOVAL Vodka presents unique characteristics and flavors unlike any other vodka. The grain is sourced from organic Midwestern farmers and milled on-site for a true grain-to-bottle product. Tasting Notes: Red berries seasoned with pink peppercorn, earth, spice and fresh cut grass overwhelm the senses, with a finish that is at once both clean and savory.",
+    "size": "750 ml",
+    "image": "Vodka.webp"
+  }
+]
